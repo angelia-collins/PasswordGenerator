@@ -2,7 +2,7 @@
 Get a unique password based on your specifications.
 
 ## What It Looks Like
-![password generator](/assets/password-generator-screencap.png)
+![password generator](/Assets/password-generator-screencap.png)
 
 ## Check It Out
 [Generate a Password](https://angelia-collins.github.io/PasswordGenerator/)
