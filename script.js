@@ -25,7 +25,30 @@ function generatePassword() {
 
   var demChar = [];
 
+  var invalid = true;
+
   var userNum = prompt("How many characters do you need? Pick between 8 and 128 characters.");
+  while (invalid) {
+    if (userNum === null) {
+      return "";
+    }
+    else {
+      userNum = Number(userNum);
+    }
+    //Did they put a number? And is it in range?
+      if (Number.isInteger(userNum)) {
+        if (userNum >= 8 && userNum <= 128) {
+          invalid = false;
+        }
+        else {
+          userNum = prompt("Only numbers between 8 and 128 please. How many characters do you need?");
+        }
+      } 
+    //Put a number fool.
+    else {
+      userNum = prompt("Only whole numbers please. How many characters do you need? Pick between 8 and 128 characters.");
+    }
+  }
 
   var lowers = confirm("Do you want lowercase letters?");
   if (lowers) {
