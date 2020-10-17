@@ -23,30 +23,31 @@ generateBtn.addEventListener("click", writePassword);
 //When user clicks make a prompt
 function generatePassword() {
 
+  var demChar = [];
+
   var userNum = prompt("How many characters do you need? Pick between 8 and 128 characters.");
 
-  /*
-  if (confirm("Do you want lowercase letters?")) {
-
+  var lowers = confirm("Do you want lowercase letters?");
+  if (lowers) {
+    demChar = demChar.concat(Arr_lowCase);
   }
-
-  if (confirm("Do you want uppercase letters?")) {
-
+  var uppers = confirm("Do you want uppercase letters?");
+  if (uppers) {
+    demChar = demChar.concat(Arr_capitalLetters);
   }
-
-  if (confirm("Do you want numbers?")) {
-
+  var num = confirm("Do you want numbers?");
+  if (num) {
+    demChar = demChar.concat(Arr_numOptions);
   }
-
-  if (confirm("Do you want special characters?")) {
-
+  var special = confirm("Do you want special characters?");
+  if (special) {
+    demChar = demChar.concat(Arr_specChar);
   }
-  */
   var answer = [];
 
   for (var i = 0; i < userNum; i++) {
-    var randomIndex = Math.floor(Math.random() * Arr_lowCase.length);
-    answer.push(Arr_lowCase[randomIndex]);
+    var randomIndex = Math.floor(Math.random() * demChar.length);
+    answer.push(demChar[randomIndex]);
   }
   return answer.join('');
 
