@@ -21,34 +21,29 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //When user clicks make a prompt
-generateBtn.onclick = function(){
+function generatePassword() {
 
-    if (prompt("How many characters do you need? Pick between 8 and 128 characters.")) {
-      
-    } else {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
+  if (prompt("How many characters do you need? Pick between 8 and 128 characters.")) {
 
-    if (confirm("Do you want lowercase letters?")) {
+  } else {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
-    } 
+  if (confirm("Do you want lowercase letters?")) {
 
-    if (confirm("Do you want uppercase letters?")) {
+  }
 
-    } 
+  if (confirm("Do you want uppercase letters?")) {
 
-    if (confirm("Do you want numbers?")) {
+  }
 
-    } 
+  if (confirm("Do you want numbers?")) {
 
-    if (confirm("Do you want special characters?")) {
+  }
 
-    }
+  if (confirm("Do you want special characters?")) {
 
-    // if (confirm("How many characters do you need?")) {
-    //   txt = "You pressed OK!";
-    // } else {
-    //   txt = "You pressed Cancel!";
-    // }
+  }
+
 
 };
